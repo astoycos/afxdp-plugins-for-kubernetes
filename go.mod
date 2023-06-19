@@ -3,11 +3,12 @@ module github.com/intel/afxdp-plugins-for-kubernetes
 go 1.13
 
 require (
+	github.com/bpfd-dev/bpfd v0.2.0
 	github.com/containernetworking/cni v1.1.2
 	github.com/containernetworking/plugins v1.1.1
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/golang/protobuf v1.5.3
-	github.com/google/gofuzz v1.1.0
+	github.com/google/gofuzz v1.2.0
 	github.com/google/uuid v1.3.0
 	github.com/intel/afxdp-plugins-for-kubernetes/pkg/goclient v0.0.0
 	github.com/intel/afxdp-plugins-for-kubernetes/pkg/subfunctions v0.0.0
@@ -21,7 +22,8 @@ require (
 	google.golang.org/grpc v1.53.0
 	google.golang.org/protobuf v1.30.0 // indirect
 	gotest.tools v2.2.0+incompatible
-	k8s.io/apimachinery v0.25.2
+	k8s.io/apimachinery v0.26.0
+	k8s.io/client-go v0.26.0
 	k8s.io/kubelet v0.25.2
 )
 
