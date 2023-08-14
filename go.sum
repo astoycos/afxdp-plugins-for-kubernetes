@@ -531,8 +531,8 @@ github.com/blang/semver v3.5.0+incompatible/go.mod h1:kRBLl5iJ+tD4TcOOxsy/0fnweb
 github.com/blang/semver v3.5.1+incompatible/go.mod h1:kRBLl5iJ+tD4TcOOxsy/0fnwebNt5EWlYSAyrTnjyyk=
 github.com/blang/semver/v4 v4.0.0/go.mod h1:IbckMUScFkM3pff0VJDNKRiT6TG/YpiHIM2yvyW5YoQ=
 github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869/go.mod h1:Ekp36dRnpXw/yCqJaO+ZrUyxD+3VXMFFr56k5XYrpB4=
-github.com/bpfd-dev/bpfd v0.2.0 h1:fNiVdjkZryNnkjZeSQN1BuGflDLZFnSRkx0Ic94f3Oo=
-github.com/bpfd-dev/bpfd v0.2.0/go.mod h1:PnpeF4m4m1m5DdMn36wnbCxvJqasYGOfNlVyFDK/6dE=
+github.com/bpfd-dev/bpfd v0.2.1 h1:YOPFCaP47vUoo57ZTAxtNeHMaavwloi+PsJ+Df6txz0=
+github.com/bpfd-dev/bpfd v0.2.1/go.mod h1:PnpeF4m4m1m5DdMn36wnbCxvJqasYGOfNlVyFDK/6dE=
 github.com/bshuster-repo/logrus-logstash-hook v0.4.1/go.mod h1:zsTqEiSzDgAa/8GZR7E1qaXrhYNDKBYy5/dWPTIflbk=
 github.com/bshuster-repo/logrus-logstash-hook v1.0.0/go.mod h1:zsTqEiSzDgAa/8GZR7E1qaXrhYNDKBYy5/dWPTIflbk=
 github.com/buger/jsonparser v0.0.0-20180808090653-f4dd9f5a6b44/go.mod h1:bbYlZJ7hK1yFx9hf58LP0zeX7UjIGs20ufpu3evjr+s=
