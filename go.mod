@@ -3,7 +3,7 @@ module github.com/intel/afxdp-plugins-for-kubernetes
 go 1.13
 
 require (
-	github.com/bpfd-dev/bpfd v0.2.1
+	github.com/bpfd-dev/bpfd v0.3.0
 	github.com/containernetworking/cni v1.1.2
 	github.com/containernetworking/plugins v1.1.1
 	github.com/distribution/reference v0.5.0
@@ -20,7 +20,7 @@ require (
 	github.com/stretchr/testify v1.8.1
 	github.com/vishvananda/netlink v1.1.1-0.20210330154013-f5de75959ad5
 	golang.org/x/net v0.17.0
-	google.golang.org/grpc v1.53.0
+	google.golang.org/grpc v1.54.0
 	google.golang.org/protobuf v1.30.0 // indirect
 	gotest.tools v2.2.0+incompatible
 	k8s.io/apimachinery v0.26.0
@@ -29,4 +29,5 @@ require (
 )
 
 replace github.com/intel/afxdp-plugins-for-kubernetes/pkg/subfunctions => ./pkg/subfunctions
+
 replace github.com/intel/afxdp-plugins-for-kubernetes/pkg/goclient => ./pkg/goclient
