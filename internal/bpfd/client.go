@@ -4,6 +4,7 @@ import (
 	"context"
 	"os"
 	"time"
+	"fmt"
 
 	bpfdiov1alpha1 "github.com/bpfd-dev/bpfd/bpfd-operator/apis/v1alpha1"
 	bpfdclient "github.com/bpfd-dev/bpfd/bpfd-operator/pkg/client/clientset/versioned"
@@ -157,15 +158,21 @@ func (b *BpfdClient) SubmitXdpProg(iface, node, pm, image, sec string) (string, 
 			if bpfProgram.ObjectMeta.Name == bpfProgName {
 				time.Sleep(1 * time.Second)
 				logging.Infof("FOUND bpfProgram %s", bpfProgram.ObjectMeta.Name)
-				logging.Infof("bpfProgram.Spec.Maps %v", bpfProgram.Spec.Maps)
-				if len(bpfProgram.Spec.Maps) == 0 {
-					logging.Errorf("NO MAPS FOUND for %s", bpfProgram.ObjectMeta.Name)
-					return "", errors.New("Failed to find a map for the loaded bpf program")
+				id, ok := bpfProgram.Annotations["bpfd.dev/ProgramId"]
+				if !ok {
+					logging.Error("BpfProgram %s does not have a program id", bpfProgName)
+					return "", errors.New("BpfProgram does not have a program id")
 				}
-				for m, path := range bpfProgram.Spec.Maps {
-					logging.Infof("map: %v", m)
-					xskmap = path
-				}
+				xskmap = fmt.Sprintf("/run/bpfd/fs/maps/%s/xsks_map", id)
+				// logging.Infof("bpfProgram.Spec.Maps %v", bpfProgram.Spec.Maps)
+				// if len(bpfProgram.Spec.Maps) == 0 {
+				// 	logging.Errorf("NO MAPS FOUND for %s", bpfProgram.ObjectMeta.Name)
+				// 	return "", errors.New("Failed to find a map for the loaded bpf program")
+				// }
+				// for m, path := range bpfProgram.Spec.Maps {
+				// 	logging.Infof("map: %v", m)
+				// 	xskmap = path
+				// }
 
 			}
 		}

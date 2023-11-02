@@ -85,12 +85,8 @@ podman: ## Build podman image
 	@echo
 
 image:
-	if $(MAKE) podman; then \
-	  echo "Podman build succeeded"; \
-	else \
-	 echo "Podman build failed, trying docker.."; \
-	 $(MAKE) docker; \
-	fi
+	echo "Podman build failed, trying docker.." \
+	$(MAKE) docker \
 
 undeploy: ## Undeploy the Deamonset
 	@echo "******  Stop Daemonset   ******"
